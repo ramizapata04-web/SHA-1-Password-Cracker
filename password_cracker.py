@@ -15,7 +15,7 @@ def crack_sha1_hash(hash, use_salts = False):
                 combinations = [
                     salt + password,
                     password + salt,
-                    salt + password + salt  # También probar con sal en ambos lados
+                    salt + password + salt 
                 ]
             else:
                 combinations = [password]
@@ -25,5 +25,5 @@ def crack_sha1_hash(hash, use_salts = False):
                 hashed_password = hash_obj.hexdigest()
                 if hashed_password == hash:
                     return password
-                    
+
     return "PASSWORD NOT IN DATABASE"
